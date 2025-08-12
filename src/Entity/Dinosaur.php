@@ -37,7 +37,7 @@ class Dinosaur
      */
     private ?string $enclosure = null;
 
-    public function __construct(string $name, string $genus = 'Unkown', int $length = 0, string $enclosure)
+    public function __construct(string $name, string $genus, int $length, string $enclosure)
     {
         $this->name = $name;
         $this->genus = $genus;
