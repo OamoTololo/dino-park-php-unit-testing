@@ -15,27 +15,35 @@ class Dinosaur
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private ?int $id = null;
 
     /**
      * @ORM\Column(type="string", length=50)
      */
-    private $name;
+    private ?string $name = null;
 
     /**
      * @ORM\Column(type="string", length=80)
      */
-    private $genus;
+    private ?string $genus = null;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $length;
+    private ?int $length = null;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $enclosure;
+    private ?string $enclosure = null;
+
+    public function __construct(string $name, string $genus = 'Unkown', int $length = 0, string $enclosure)
+    {
+        $this->name = $name;
+        $this->genus = $genus;
+        $this->length = $length;
+        $this->enclosure = $enclosure;
+    }
 
     public function getId(): ?int
     {
