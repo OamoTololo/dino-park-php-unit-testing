@@ -45,21 +45,9 @@ class Dinosaur
         $this->enclosure = $enclosure;
     }
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
     public function getName(): ?string
     {
         return $this->name;
-    }
-
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
     }
 
     public function getGenus(): ?string
@@ -67,34 +55,13 @@ class Dinosaur
         return $this->genus;
     }
 
-    public function setGenus(string $genus): self
-    {
-        $this->genus = $genus;
-
-        return $this;
-    }
-
     public function getLength(): ?int
     {
         return $this->length;
     }
 
-    public function setLength(int $length): self
-    {
-        $this->length = $length;
-
-        return $this;
-    }
-
     public function getEnclosure(): ?string
     {
         return $this->enclosure;
-    }
-
-    public function setEnclosure(string $enclosure): self
-    {
-        $this->enclosure = $enclosure;
-
-        return $this;
     }
 }
